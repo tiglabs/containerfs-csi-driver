@@ -14,9 +14,11 @@ Mountprogpation requries support for privileged containers. So, make sure privil
 
 ### Get csi sidecar images
 
-```docker pull quay.io/k8scsi/csi-attacher:v0.2.0```
-```docker pull quay.io/k8scsi/driver-registrar:v0.2.0```
-```docker pull quay.io/k8scsi/csi-provisioner:v0.2.0```
+```
+docker pull quay.io/k8scsi/csi-attacher:v0.2.0
+docker pull quay.io/k8scsi/driver-registrar:v0.2.0
+docker pull quay.io/k8scsi/csi-provisioner:v0.2.0
+```
 
 ### Build cfscsi driver image
 
@@ -34,12 +36,16 @@ Mountprogpation requries support for privileged containers. So, make sure privil
 
 Please update the cfs Master Hosts & volumeName information in nginx-pre.yaml file.
 
-```docker pull nginx```
-```kubectl create -f deploy/examples/nginx-pre.yaml```
+```
+docker pull nginx
+kubectl create -f deploy/examples/nginx-pre.yaml
+```
 
 ### Dynamic volume: Example Nginx application
 
-```docker pull nginx```
-```kubectl create -f deploy/examples/cfs-pvc.yaml```
-```kubectl create -f deploy/examples/cfs-pv.yaml```
-```kubectl create -f deploy/examples/nginx-dynamic.yaml```
+```
+docker pull nginx
+kubectl create -f deploy/examples/cfs-pvc.yaml
+kubectl create -f deploy/examples/cfs-pv.yaml
+kubectl create -f deploy/examples/nginx-dynamic.yaml
+```
