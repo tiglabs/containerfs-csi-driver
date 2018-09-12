@@ -1,0 +1,9 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: cfspvc
+provisioner: csi-cfsplugin
+parameters:
+  cfsMaster1: 10.10.2.4:80
+  cfsMaster2: 10.10.2.5:80
+  cfsMaster3: 10.10.2.6:80
